@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+    --color-w: #ffffff;
+    --color-nb: #070724;
+    --color-g-2: #38384f;
+    --color-g-1: #838391;
+    --color-mercury: #def4fc;
+    --color-venus: #f7cc7f;
+    --color-earth: #545bfe;
+    --color-mars: #ff6a45;
+    --color-jupiter: #ecad7a;
+    --color-saturn: #fccb6b;
+    --color-uranus: #65f0d5;
+    --color-neptune: #497efa;
+    --color-clr-m: #419ebb;
+    --color-clr-v: #eda249;
+    --color-clr-e: #6d2ed5;
+    --color-clr-r: #d14c32;
+    --color-clr-j: #d83a34;
+    --color-clr-s: #cd5120;
+    --color-clr-u: #1ec1a2;
+    --color-clr-n: #2d68f0;
+
+    --font-an: "Antonio", sans-serif;
+    --font-ls: "League Spartan", sans-serif;
+}
+
+@layer base {
+    h1 {
+        @apply font-an font-medium text-w text-[2.5rem] sm:text-[3rem] lg:text-[5rem];
+    }
+
+    h2 {
+        @apply font-an font-medium text-w text-[1.25rem] tracking-[-0.75px] sm:text-[1.5rem] sm:tracking-[-0.9px] lg:text-[2.5rem] lg:tracking-[-1.5px];
+    }
+
+    h3 {
+        @apply font-ls font-bold text-g-1 text-[0.5625rem] tracking-[1.93px] sm:text-[0.85rem] sm:tracking-[1px] sm:leading-[25px] lg:text-[0.75rem] lg:tracking-[2.57px];
+    }
+
+    h4 {
+        @apply font-ls font-bold text-g-1 text-[0.5rem] tracking-[0.73px] leading-[16px] lg:text-[0.6875rem] lg:tracking-[1px] lg:leading-[25px];
+    }
+
+    p {
+        @apply font-ls text-w leading-[22px] text-[0.6875rem] sm:text-[1.5625rem];
+    }
+}
+
+@layer utilities {
+    .logo {
+        @apply font-an font-medium text-w text-[1.75rem] tracking-[-1.05px];
+    }
+
+    .header {
+        @apply lg:max-w-[1378px] px-6 sm:px-10 lg:px-0 lg:mx-auto;
+    }
+
+    .wrapper {
+        @apply px-6 sm:px-10 lg:px-0 lg:max-w-[1110px] lg:mx-auto;
+    }
+
+    .active {
+        @apply sm:before:w-full;
+    }
+
+    .nav::before {
+        background-color: var(--before-color);
+    }
+
+    .tab::after {
+        background-color: var(--after-color);
+    }
+}
